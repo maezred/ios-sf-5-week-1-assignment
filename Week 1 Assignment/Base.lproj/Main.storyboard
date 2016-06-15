@@ -1,26 +1,210 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bAj-Z4-Fge">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="Week_1_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="M2D-v3-1x1"/>
+                        <viewControllerLayoutGuide type="bottom" id="6c2-Bo-W2j"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="view" contentMode="scaleToFill" id="eGO-cL-y4h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KnS-br-Ssv">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVB-JJ-Lxj">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ks-xV-MLr">
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="1XA-bk-TC1" kind="show" id="AvI-wv-KOJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PVB-JJ-Lxj" firstAttribute="trailing" secondItem="2ks-xV-MLr" secondAttribute="trailing" id="EDK-QD-ebs"/>
+                            <constraint firstItem="KnS-br-Ssv" firstAttribute="leading" secondItem="eGO-cL-y4h" secondAttribute="leadingMargin" id="EHd-Jd-pS8"/>
+                            <constraint firstItem="KnS-br-Ssv" firstAttribute="trailing" secondItem="eGO-cL-y4h" secondAttribute="trailingMargin" id="Eak-Ze-7ar"/>
+                            <constraint firstItem="2ks-xV-MLr" firstAttribute="top" secondItem="PVB-JJ-Lxj" secondAttribute="bottom" constant="8" symbolic="YES" id="U3D-OG-u7B"/>
+                            <constraint firstItem="KnS-br-Ssv" firstAttribute="top" secondItem="M2D-v3-1x1" secondAttribute="bottom" constant="8" symbolic="YES" id="a7C-Ti-8J7"/>
+                            <constraint firstItem="PVB-JJ-Lxj" firstAttribute="leading" secondItem="2ks-xV-MLr" secondAttribute="leading" id="gTQ-eA-6BC"/>
+                            <constraint firstItem="KnS-br-Ssv" firstAttribute="leading" secondItem="PVB-JJ-Lxj" secondAttribute="leading" id="siQ-8E-Z02"/>
+                            <constraint firstItem="PVB-JJ-Lxj" firstAttribute="top" secondItem="KnS-br-Ssv" secondAttribute="bottom" constant="8" symbolic="YES" id="vGH-yk-3eV"/>
+                            <constraint firstItem="KnS-br-Ssv" firstAttribute="trailing" secondItem="PVB-JJ-Lxj" secondAttribute="trailing" id="x2l-11-aQF"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="luj-Uj-5vh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1686" y="-736"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jrm-an-rf5">
+            <objects>
+                <navigationController id="1XA-bk-TC1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Be-kQ-AaO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vv5-Gp-ynw" kind="relationship" relationship="rootViewController" id="9Pi-7z-2zS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROX-6I-bWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="139"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="57c-ZD-krZ">
+            <objects>
+                <viewController title="Main" id="vv5-Gp-ynw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XlA-9Z-axe"/>
+                        <viewControllerLayoutGuide type="bottom" id="xX7-vn-Gk0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="11q-xH-Qql">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="H9T-Et-LZV">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H9T-Et-LZV" secondAttribute="height" multiplier="1:1" id="kAM-3Z-EE0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFE-Ze-sdy">
+                                <state key="normal" title="Goals"/>
+                                <connections>
+                                    <segue destination="Snf-XD-Uho" kind="show" id="073-qP-atd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BFE-Ze-sdy" firstAttribute="top" secondItem="H9T-Et-LZV" secondAttribute="bottom" constant="8" symbolic="YES" id="3uU-nT-N30"/>
+                            <constraint firstItem="BFE-Ze-sdy" firstAttribute="leading" secondItem="11q-xH-Qql" secondAttribute="leadingMargin" id="ASZ-GG-7MX"/>
+                            <constraint firstItem="BFE-Ze-sdy" firstAttribute="centerX" secondItem="H9T-Et-LZV" secondAttribute="centerX" id="YJ8-3o-9Tw"/>
+                            <constraint firstItem="H9T-Et-LZV" firstAttribute="top" secondItem="XlA-9Z-axe" secondAttribute="bottom" constant="8" id="bVu-IL-31p"/>
+                            <constraint firstItem="H9T-Et-LZV" firstAttribute="leading" secondItem="11q-xH-Qql" secondAttribute="leadingMargin" constant="80" id="hLf-Hu-lgt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9T-Et-LZV" secondAttribute="trailing" constant="80" id="yAN-fB-4vQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main" id="bIt-Mc-I2N">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="TPO-8L-j5V">
+                            <connections>
+                                <segue destination="Pge-rB-Cmy" kind="show" id="O3s-NK-9g0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDP-pB-Qo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685.625" y="138.38028169014083"/>
+        </scene>
+        <!--Bio-->
+        <scene sceneID="IXY-yt-5pm">
+            <objects>
+                <viewController title="Bio" id="Pge-rB-Cmy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XGz-G6-xXb"/>
+                        <viewControllerLayoutGuide type="bottom" id="uDs-q6-vUy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wVB-6j-pTF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-0p-xu9">
+                                <frame key="frameInset" minX="16" width="288" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lifelong technology enthusiast well versed in mobile and web development with 4 years of mobile development industry experience. Keeps up with the latest specifications and continually improves development workflows. Always focused on writing maintainable code and iterating based on feedback.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="contentOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppk-nb-TC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456.25" y="138.38028169014083"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="JgU-Zm-6J4">
+            <objects>
+                <viewController title="Goals" id="Snf-XD-Uho" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n7z-X6-75u"/>
+                        <viewControllerLayoutGuide type="bottom" id="OSL-Vx-3Qu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfq-HY-heg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-jY-mRl">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">1. To master storyboards because they are the bane of my existence. 2. To learn Swift and any nifty libraries like RxSwift and a Retrofit alternative. 3. To make new friends! 4. To find a job so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficiently so I can make more money so I can buy more development tools to write software more efficie  
+Thread 1: EXC_BAD_ACCESS (code=2, address=0x7fff53ab3ff8)</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="contentOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VF5-jY-mRl" firstAttribute="leading" secondItem="cfq-HY-heg" secondAttribute="leadingMargin" id="NXJ-Zn-VMy"/>
+                            <constraint firstItem="VF5-jY-mRl" firstAttribute="top" secondItem="cfq-HY-heg" secondAttribute="topMargin" id="jut-FT-pXG"/>
+                            <constraint firstItem="VF5-jY-mRl" firstAttribute="trailing" secondItem="cfq-HY-heg" secondAttribute="trailingMargin" id="m9Q-MW-Uqb"/>
+                            <constraint firstItem="VF5-jY-mRl" firstAttribute="bottom" secondItem="cfq-HY-heg" secondAttribute="bottomMargin" id="tvC-i3-rcT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sR-5p-szh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685.625" y="850.35211267605632"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lpk-ga-Hnp">
+            <objects>
+                <navigationController id="bAj-Z4-Fge" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="op2-rp-AKz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l8s-h7-VQq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGO-pq-U9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="-736"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Headshot" width="682" height="682"/>
+    </resources>
 </document>
